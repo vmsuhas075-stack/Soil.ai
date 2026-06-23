@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Soil Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>🌱 AI Soil Analyzer</h1>
+    <p>Upload a soil image to estimate moisture and soil quality.</p>
+
+    <div class="upload-box">
+        <input type="file" id="imageInput" accept="image/*">
+        <br><br>
+        <img id="preview" src="" alt="Image Preview" style="display:none;">
+    </div>
+
+    <button onclick="analyzeSoil()">Analyze Soil</button>
+
+    <div id="loading" style="display:none;">
+        <p>Analyzing image...</p>
+    </div>
+
+    <div id="result" style="display:none;">
+        <h2>Analysis Result</h2>
+
+        <p><strong>Moisture:</strong> <span id="moisture"></span></p>
+        <p><strong>Soil Type:</strong> <span id="soilType"></span></p>
+        <p><strong>Quality:</strong> <span id="quality"></span></p>
+        <p><strong>Confidence:</strong> <span id="confidence"></span></p>
+
+        <h3>Recommended Crops</h3>
+        <ul id="crops"></ul>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
